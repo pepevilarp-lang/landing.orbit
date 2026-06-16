@@ -9,7 +9,7 @@ const CONFIG = {
   email:    "hola@cadence.studio",          // tu email
   waMessage:"Hola Cadence, quiero crear mi identidad de marca.",
   frameCount: 91,                           // nº de imágenes en assets/frames
-  framePath: (i) => `assets/frames/f${String(i).padStart(3,"0")}.webp`,
+  framePath: (i) => `f${String(i).padStart(3,"0")}.webp`,
   revealAt: 0.62                            // progreso (0-1) en el que aparece el titular
 };
 
