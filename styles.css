@@ -41,9 +41,13 @@ h1,h2,h3{font-family:var(--disp);font-weight:800;letter-spacing:-.03em;line-heig
 .top .menu:hover{opacity:.6}
 
 /* ===== HERO ===== */
-.cine{position:relative;height:320vh}
+.cine{position:relative;height:240vh}
 .stage{position:sticky;top:0;height:100svh;min-height:600px;overflow:hidden;background:#000}
-.scene{position:absolute;inset:0;width:100%;height:100%;display:block;background:#000}
+.scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%;display:block;background:#000;
+  transform-origin:80% 47%;transform:scale(1.05);will-change:transform;filter:brightness(.82) contrast(1.03) saturate(.92)}
+.scrim{position:absolute;inset:0;z-index:2;background:#050505;opacity:.28;will-change:opacity;pointer-events:none}
+.veil{position:absolute;inset:0;z-index:8;background:#050505;animation:fadeveil 1.5s ease forwards .1s;pointer-events:none}
+@keyframes fadeveil{to{opacity:0;visibility:hidden}}
 .grade{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(5,5,5,.62) 0%,rgba(5,5,5,.05) 24%,rgba(5,5,5,.18) 55%,rgba(5,5,5,.9) 100%)}
 .redglow{position:absolute;inset:0;z-index:2;mix-blend-mode:screen;pointer-events:none;opacity:.12;will-change:opacity;background:radial-gradient(40% 46% at 50% 50%,rgba(217,4,41,.5),transparent 72%)}
 .grain{position:absolute;inset:0;z-index:3;opacity:.05;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
